@@ -20,8 +20,7 @@ def scrape():
     Mars.update(
         {},
         data,
-        upsert=True
-    )
+        upsert=True)
     return redirect("/", code=302)
 
 

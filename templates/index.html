@@ -13,17 +13,17 @@
   <div clas="container">
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      <p><a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/scrape" role="button">Scrape New Data</a></p>
     </div>
       
     
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h3>Featured Mars Image</h3>
-        <img src= {{ featured_image_url }} width: 50% />
+        <img src= {{ Mars.Mars_image }} width: 50% />
         <h3>Latest Mars News</h3>
-        <p>{{ news_title }}</p>
-        <p>{{news_p}}</p>
+        <p>{{ Mars.Mars_headline }}</p>
+        <p>{{ Mars.Mars_news }}</p>
         <h3>Mars Facts</h3>
         <table border="1" class="dataframe">
           <thead>
@@ -78,6 +78,29 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+        <h2 class="heading" ; Align=Center class="bold_text">Mars Hemispheres</h2>
+
+    </div>
+</div>
+
+<hr>
+
+<div class="row" >
+    
+    {% for title, img_url in Mars.Mars_hemi %}
+ 
+    <div class="col-md-6" style="border: 1px solid black; padding: 3px; ">
+
+        <img src="{{img_url}}" class="img-fluid" alt="Responsive image">
+        <h3 Align=Center> {{title}}</h3>
+    </div>
+
+    {% endfor %}
+</div>
+</div>
+
 
 </body>
 </html>

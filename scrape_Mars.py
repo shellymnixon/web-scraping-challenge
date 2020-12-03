@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 def init_browser():
-    executable_path = {"executable_path": "chromedriver.exe"}
+    executable_path = {"executable_path": "C:/Users/arc user/Desktop/web-scraping-challenge/web-scraping-challenge/chromedriver.exe"}
     return Browser("chrome", **executable_path, headless=False)
 
 def scrape():
@@ -21,7 +21,6 @@ def scrape():
     news_title = step2.find('div', class_='content_title').text
 
     news_p = step2.find('div', class_='article_teaser_body').get_text()
-    Mars_data["article_teaser_body"] = news_p
 
     url_images = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(url_images)
@@ -93,14 +92,19 @@ def scrape():
     valles = soup.find('img', class_='wide-image')["src"]
     valles_hr = "https://astrogeology.usgs.gov" + valles
 
-    #hemisphere_image_urls = [
-        #{"title": "Valles Marineris Hemisphere", "img_url": valles_hr},
-        #{"title": "Cerberus Hemisphere", "img_url": cerberus_hr},
-        #{"title": "Schiaparelli Hemisphere", "img_url": schiap_hr},
-        #{"title": "Syrtis Major Hemisphere", "img_url": syrtis_hr},
-    #]
+    hemisphere_image_urls = [
+        {"title": "Valles Marineris Hemisphere", "img_url": valles_hr},
+        {"title": "Cerberus Hemisphere", "img_url": cerberus_hr},
+        {"title": "Schiaparelli Hemisphere", "img_url": schiap_hr},
+        {"title": "Syrtis Major Hemisphere", "img_url": syrtis_hr},]
 
-    browser.quit()
-   
+    mars_dict = {
+        "Mars_headline": news_title,
+        "Mars_news": news_p,
+        "Mars_image": featured_image_url,
+        "Mars_hemi": hemisphere_image_urls
+        }
+
+    return mars_dict
 
 
