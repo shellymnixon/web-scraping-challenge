@@ -65,6 +65,7 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
+    hemisphere_image_urls = []
     cerberus = soup.find('img', class_='wide-image')["src"]
     cerberus_hr = "https://astrogeology.usgs.gov" + cerberus
 
@@ -102,7 +103,10 @@ def scrape():
         "Mars_headline": news_title,
         "Mars_news": news_p,
         "Mars_image": featured_image_url,
-        "Mars_hemi": hemisphere_image_urls
+        "Valles": valles_hr,
+        "Cerberus": cerberus_hr,
+        "Schiap": schiap_hr,
+        "Syrtis": syrtis_hr
         }
 
     return mars_dict

@@ -87,17 +87,45 @@
 
 <hr>
 
-<div class="row" >
-    
-    {% for title, img_url in Mars.Mars_hemi %}
- 
-    <div class="col-md-6" style="border: 1px solid black; padding: 3px; ">
-
-        <img src="{{img_url}}" class="img-fluid" alt="Responsive image">
-        <h3 Align=Center> {{title}}</h3>
-    </div>
-
-    {% endfor %}
+  <div class="col-md-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="title" id="title">
+                <h5>Valles Hemisphere</h5>
+            </div>
+                <div class="thumbnail">
+                    <img src= {{ Mars.Valles }} class="img-thumbnail"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="title" id="title">
+                    <h5>Cerberus Hemisphere</h5>
+                </div>
+                <div class="thumbnail">
+                    <img src= {{ Mars.Cerberus }} class="img-thumbnail"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="title" id="title">
+                    <h5>Schiaparelli Hemisphere</h5>
+                </div>
+                <div class="thumbnail">
+                    <img src= {{ Mars.Schiap }} class="img-thumbnail"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="title" id="title">
+                    <h5>Syrtis Major Hemisphere</h5>
+                </div>
+                <div class="thumbnail">
+                    <img src= {{ Mars.Syrtis }} class="img-thumbnail"></a>
+                </div>
+            </div>
+        </div>
+  </div>
 </div>
 </div>
 
