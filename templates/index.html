@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,16 +19,17 @@
       
     
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h3>Featured Mars Image</h3>
-        <img src= {{ Mars.Mars_image }} width: 50% />
-        <h3>Latest Mars News</h3>
+      <div class="col-md-12">
+        <h2 class="heading" ; Align=Center class="bold_text">Featured Mars Image</h2>
+       
+        <img src= {{ Mars.Mars_image }}>
+        <h3 class="heading" ; Align=Left class="bold_text">Latest Mars News</h3>
         <p>{{ Mars.Mars_headline }}</p>
         <p>{{ Mars.Mars_news }}</p>
         <h3>Mars Facts</h3>
         <table border="1" class="dataframe">
           <thead>
-            <tr style="text-align: right;">
+            <tr style="text-align: left;">
               <th></th>
               <th>Profile</th>
             </tr>
@@ -92,7 +94,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="title" id="title">
-                <h5>Valles Hemisphere</h5>
+                <h3>Valles Hemisphere</h3>
             </div>
                 <div class="thumbnail">
                     <img src= {{ Mars.Valles }} class="img-thumbnail"></a>
@@ -100,7 +102,7 @@
             </div>
             <div class="col-md-6">
                 <div class="title" id="title">
-                    <h5>Cerberus Hemisphere</h5>
+                    <h3>Cerberus Hemisphere</h3>
                 </div>
                 <div class="thumbnail">
                     <img src= {{ Mars.Cerberus }} class="img-thumbnail"></a>
@@ -110,7 +112,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="title" id="title">
-                    <h5>Schiaparelli Hemisphere</h5>
+                    <h3>Schiaparelli Hemisphere</h3>
                 </div>
                 <div class="thumbnail">
                     <img src= {{ Mars.Schiap }} class="img-thumbnail"></a>
@@ -118,7 +120,7 @@
             </div>
             <div class="col-md-6">
                 <div class="title" id="title">
-                    <h5>Syrtis Major Hemisphere</h5>
+                    <h3>Syrtis Major Hemisphere</h3>
                 </div>
                 <div class="thumbnail">
                     <img src= {{ Mars.Syrtis }} class="img-thumbnail"></a>
@@ -126,7 +128,6 @@
             </div>
         </div>
   </div>
-</div>
 </div>
 
 
